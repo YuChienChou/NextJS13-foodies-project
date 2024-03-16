@@ -190,6 +190,7 @@ async function initData() {
          @creator_email
       )
    `);
+   // Insert the dummy meals into the database using a prepared statement to prevent SQL injection attacks
 
   for (const meal of dummyMeals) {
     stmt.run(meal);
