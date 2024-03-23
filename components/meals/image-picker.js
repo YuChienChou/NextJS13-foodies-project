@@ -6,7 +6,11 @@ import Image from "next/image";
 import classes from "./image-picker.module.css";
 
 export default function ImagePicker({ label, name }) {
+
+  // console.log("label: ", label);  
+  // console.log("name: ", name);
   const [pickedImage, setPickedImage] = useState();
+  // console.log("pickedImage: ", pickedImage);
 
   const imageInput = useRef(); // Create a reference to the input element
 
@@ -40,7 +44,7 @@ export default function ImagePicker({ label, name }) {
         <div className={classes.preview}>
           {!pickedImage && <p>No image picked yet.</p>}
           {pickedImage && (
-            <Image src={pickedImage} alt="The image selected by the use." fill />
+            <Image src={pickedImage} alt="The image selected by the user." fill />
           )}
         </div>
         <input
